@@ -14,14 +14,14 @@ const AdminDashboard = () => {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:5000/api/kyc")
+      .get("https://minikyc-server.onrender.com/api/kyc")
       .then((res) => setEntries(res.data))
       .catch((err) => console.error(err));
   };
 
   const updateStatus = async (id, newStatus) => {
     try {
-      const res = await axios.patch(`http://localhost:5000/api/kyc/${id}`, {
+      const res = await axios.patch(`https://minikyc-server.onrender.com/api/kyc/${id}`, {
         status: newStatus,
       });
 

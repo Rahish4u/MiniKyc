@@ -48,7 +48,7 @@ const KycForm = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/kyc", formData);
+      await axios.post("https://minikyc-server.onrender.com/api/kyc", formData);
       toast.success("✅ KYC Submitted Successfully!");
       setFormData({
         name: "",
