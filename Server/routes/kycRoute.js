@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createKYC, getAllKYC } = require("../controllers/controller");
+const { createKYC, getAllKYC, updateStatus  } = require("../controllers/controller");
 
 router.post("/kyc", createKYC);
 router.get("/kyc", getAllKYC);
